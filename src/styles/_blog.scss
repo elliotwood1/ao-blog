@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+
+@font-face {
+    font-family: 'ao-icons';
+    src:  url('./ao-icons.woff2') format('woff2'),
+  }
+
+@font-face {
+    font-family: 'ao-font';
+    src: url('./AoOz-Regular.woff') format('woff'),
+}
+
+@font-face {
+    font-family: 'ao-font-bold';
+    src: url('./AoOz-Bold\ \(2\).woff') format('woff'),
+}
+
+body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1vw;
+    background-color: #efefef;
+}
+
+.blog-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('../img/header_aeg.jpg');
+    background-position: 50%;
+    background-size: cover;
+    height: 50vh;
+    color: #efefef;
+    margin-bottom: -50px;
+}
+
+.header-content {
+    max-width: 60vw;
+    margin: 0 29vw;
+    margin-bottom: 2vw;
+    h1 {
+        font-size: 3.5vw;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 2vh;
+        font-family: 'ao-font-bold';
+    }
+    h1 span {
+        display: block;
+        font-size: 2.5vw;
+        font-family: Satisfy,cursive;
+        font-weight: 400;
+    }
+    p {
+        line-height: 1.4;
+    }
+}
+
+article {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60vw;
+    .inner {
+        background-color: #efefef;
+        padding: 5vw;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+    figure {
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: auto;
+        }
+    }
+}
