@@ -19,6 +19,7 @@ body {
     font-family: Arial,Helvetica,sans-serif;
     font-size: 1vw;
     background-color: #efefef;
+    color: #444;
 }
 
 .blog-header {
@@ -29,7 +30,8 @@ body {
     background-image: url('../img/header_aeg.jpg');
     background-position: 50%;
     background-size: cover;
-    height: 50vh;
+    // height: 50vh;
+    height: 25rem;
     color: #efefef;
     margin-bottom: -50px;
 }
@@ -53,13 +55,17 @@ body {
     }
     p {
         line-height: 1.4;
+        font-size: 1vw;
     }
 }
 
 article {
     margin-left: auto;
     margin-right: auto;
-    max-width: 60vw;
+    max-width: 55vw;
+    p {
+        margin-bottom: 2vh;
+    }
     .inner {
         background-color: #efefef;
         padding: 5vw;
@@ -68,12 +74,144 @@ article {
         display: flex;
         align-items: center;
         z-index: 1;
+        margin-bottom: 5vh;
     }
     figure {
         img {
             border-radius: 50%;
             width: 150px;
             height: auto;
+            margin-right: 2.5vw;
+        }
+    }
+    .header-paragraph {
+        font-size: 1.25vw;
+        width: 65%;
+        margin: 0;
+        a {
+            color:#7fba23;
+        }
+    }
+    .article-quote {
+        font-family: 'ao-font';
+        &:before {
+            font-family: ao-icons;
+            content: "\e63e";
+            color: #7fba23;
+            font-size: 1.7vw;
+            margin-bottom: 2vh;
+        }
+        &:after {
+            font-family: ao-icons;
+            align-self: flex-end;
+            content: "\e63d";
+            color: #7fba23;
+            font-size: 1.7vw;
+        }
+    }
+    blockquote {
+        display: flex;
+        flex-direction: column;
+        font-size: 2vw;
+        color: #444;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        p {
+            font-family: 'ao-font-bold';
+            font-weight: 700;
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 2vh;
+    }
+}
+
+.shop-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d6d6d6;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    h3 {
+        font-size: 3vw;
+        font-family: 'ao-font-bold';
+        margin-bottom: 4vh;
+    }
+    p {
+        margin-bottom: 4vh;
+    }
+    a {
+        padding: 13px 10px 13px 10px;
+        background-color: #7fba23;
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+        span {
+            font-size: 1.1vw;
+            font-weight: 700;
+            &:after {
+                content: "\e918";
+                font-family: 'ao-icons';
+                padding-left: .5vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-header {
+        height: 15rem;
+    }
+    article {
+        figure {
+            img {
+                width: 125px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 50%;
+    }
+    .blog-header {
+        height: 15rem;
+        .header-content {
+            h1 {
+                font-size: 6vw;
+                span {
+                    font-size: 4vw;
+                }
+            }
+            p {
+                font-size: 2vw;
+            }
+        }
+    }
+    article {
+        header {
+            flex-direction: column;
+        }
+        figure {
+            img {
+                width: 100px;
+            }
+        }
+        .header-paragraph {
+            width: 95%;
+            text-align: center;
+        }
+    }
+
+    .shop-all {
+        a {
+            span {
+                font-size: .6rem;
+            }
         }
     }
 }
